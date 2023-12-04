@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: arbazmazuredevopscentos 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arbazmazuredevopscentos
+  template:
+    metadata:
+      labels:
+        app: arbazmazuredevopscentos 
+    spec:
+      containers:
+        - name: arbazmazuredevopscentos 
+          image: myaksr.azurecr.io/arbazmazuredevopscentos
+          ports:
+          - containerPort: 80
